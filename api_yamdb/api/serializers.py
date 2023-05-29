@@ -1,9 +1,8 @@
 from django.core.exceptions import ValidationError
-from django.core.validators import RegexValidator, EmailValidator
+from django.core.validators import EmailValidator, RegexValidator
 from django.shortcuts import get_object_or_404
 from rest_framework import serializers
 from rest_framework_simplejwt.tokens import RefreshToken
-
 from reviews.models import Category, Comment, Genre, Review, Title
 from users.models import User
 

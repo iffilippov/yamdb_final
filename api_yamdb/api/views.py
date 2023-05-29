@@ -8,37 +8,23 @@ from django_filters.rest_framework import DjangoFilterBackend
 from rest_framework import filters, views, viewsets
 from rest_framework.decorators import action
 from rest_framework.filters import SearchFilter
-from rest_framework.pagination import (
-    LimitOffsetPagination,
-    PageNumberPagination
-)
-from rest_framework.permissions import (
-    AllowAny,
-    IsAuthenticated,
-    IsAuthenticatedOrReadOnly,
-)
+from rest_framework.pagination import (LimitOffsetPagination,
+                                       PageNumberPagination)
+from rest_framework.permissions import (AllowAny, IsAuthenticated,
+                                        IsAuthenticatedOrReadOnly)
 from rest_framework.response import Response
 from reviews.models import Category, Comment, Genre, Review, Title
 from users.models import User
 
 from .filters import FilterTitle
 from .mixins import ListCreateDeleteViewSet
-from .permissions import (
-    AdminOrReadOnly,
-    AdminOrSuperUserOnly,
-    AuthenticatedOrReadOnly
-)
-from .serializers import (
-    CategorySerializer,
-    CommentSerializer,
-    GenreSerializer,
-    ReviewSerializer,
-    TitlePostSerializer,
-    TitleSerializer,
-    TokenCreateSerializer,
-    UserSerializer,
-    UserSignUpSerializer,
-)
+from .permissions import (AdminOrReadOnly, AdminOrSuperUserOnly,
+                          AuthenticatedOrReadOnly)
+from .serializers import (CategorySerializer, CommentSerializer,
+                          GenreSerializer, ReviewSerializer,
+                          TitlePostSerializer, TitleSerializer,
+                          TokenCreateSerializer, UserSerializer,
+                          UserSignUpSerializer)
 
 
 class UserViewSet(viewsets.ModelViewSet):
