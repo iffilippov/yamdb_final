@@ -88,7 +88,7 @@ docker-compose exec web python manage.py csv_import
 Документация доступна по адресу:
 
 ```
-http://localhost/redoc/
+http://158.160.29.163/redoc/
 ```
 
 ### Авторы:
